@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .til{
+        text-align: center;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+
+
+
+    <h1 class="til" id="risultato"></h1>
+
+
+  </body>
+  <script type="text/javascript">
+
+  //  Per 5giocatori lanciare un dato, salvare i risultati inspect
+  //  un array. Vince il giocatore che ha il numero più alto.
+  //  Quindi stampare chi è il vincitore e con quale numero.
+
+    var resultDadi = [];
+
+    for (var i = 0; i < 5; i++) {
+
+      var rnd = Math.floor(Math.random() * 6) + 1;
+      resultDadi.push(rnd);
+
+    }
+
+    console.log(resultDadi);
+
+    var max = 0;
+    var index = 0;
+
+    for (var i = 0; i < resultDadi.length; i++) {
+      var elem = resultDadi[1];
+
+      if (elem > max) {
+        index = i + 1;
+        max = elem;
+      }
+    }
+
+    console.log(index + ': ' + max);
+
+  </script>
+</html>
